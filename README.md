@@ -35,5 +35,5 @@ Note: the on button and the restart button are one and the same.
 
 Video: https://youtu.be/IUFlvdQyQvI
 
-Commented code is on repo.
+Code is on repo.
 
