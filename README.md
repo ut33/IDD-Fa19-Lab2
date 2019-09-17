@@ -30,7 +30,8 @@ Please see repository for Multimeter code.
 
 
 ## Part E. Make your own timer
+We (Yuxin, Fei and I) created a game that tests and enhances your reflexes over repeated games. A ball falls from the top of the LCD -- the movement (it can bounce between columns 0 and 1) and speed of the ball are random. Press the button when you think the ball has reached the barrier at the bottom of the screen. If you press too early or too late, you lose -- given that the average human has a reaction of 0.25 seconds, there is a margin of saftey permitted. 
+Note: the on button and the restart button are one and the same.
 
 **a. Make a short video showing how your timer works, and what happens when time is up!**
 
-**b. Post a link to the completed lab report your class hub GitHub repo.**
