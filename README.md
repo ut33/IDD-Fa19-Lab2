@@ -27,9 +27,12 @@ Video of rotary encoder: https://youtu.be/XUsaTZPZtdg
 ## Part D. Make your Arduino sing!
 
 **a. How would you change the code to make the song play twice as fast?**
+Decrease the duration of each note by half -- that is double the value of the numbers in int noteDurations[], as they are inverses.
+For example, the original line of code was: int noteDurations[] = {4, 8, 8, 4, 4, 4, 4, 4};
+To make the song play twice as fast, it was changed to: int noteDurations[] =  {8, 16, 16, 8, 8, 8, 8, 8};
  
 **b. What song is playing?**
-I'm not sure, but it sounds really really familiar. Is it a nursey rhyme or star wars?
+Star Wars!
 
 ## Part E. Make your own timer
 We (Yuxin, Fei and I) created a game that tests and enhances your reflexes over repeated games. A ball falls from the top of the LCD -- the movement (it can bounce between columns 0 and 1) and speed of the ball are random. Press the button when you think the ball has reached the barrier at the bottom of the screen. If you press too early or too late, you lose -- given that the average human has a reaction of 0.25 seconds, there is a margin of saftey permitted. 
