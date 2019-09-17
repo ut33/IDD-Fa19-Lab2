@@ -16,6 +16,7 @@
  
 **e. Include a copy of your Lowly Multimeter code in your lab write-up.**
 Please see repository for Multimeter code.
+https://youtu.be/ifi3GJ1nCHE
 
 ## Part C. Using a time-based digital sensor
 
