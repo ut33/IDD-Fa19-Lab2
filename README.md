@@ -19,7 +19,7 @@ Please see repository for Multimeter code.
 
 ## Part C. Using a time-based digital sensor
 
-**Upload a video of your working rotary encoder here.**
+Video of rotary encoder: https://youtu.be/XUsaTZPZtdg
 
 
 ## Part D. Make your Arduino sing!
