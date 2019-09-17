@@ -29,16 +29,6 @@ byte antiball[8] = {
   0b00000,
   0b00000
 };
-byte sidewaysheart[8] = {
-  0b00000,
-  0b11100,
-  0b11110,
-  0b01111,
-  0b11110,
-  0b11100,
-  0b00000,
-  0b00000
-};
 byte barrier[8] = {
   0b10000,
   0b10000,
@@ -48,16 +38,6 @@ byte barrier[8] = {
   0b10000,
   0b10000,
   0b10000
-};
-byte heart[8] = {
-  0b00000,
-  0b01010,
-  0b11111,
-  0b11111,
-  0b11111,
-  0b01110,
-  0b00100,
-  0b00000
 };
 byte smiley[8] = {
   0b00000,
@@ -138,12 +118,12 @@ int tempo[] = {
   12, 12, 12, 12,
   12, 12, 12, 12,
 };
-// Feilure
-int feilure_melody[] = {
+// Failure
+int failure_melody[] = {
   NOTE_C4, NOTE_B4, NOTE_AS4, NOTE_A4,
 };
-// Feilure tempo
-int feilure_tempo[] = {
+// Failure tempo
+int failure_tempo[] = {
   5, 5, 5, 2
 };
 
@@ -175,8 +155,6 @@ void setup() {
   Serial.begin(9600); 
   pinMode(9, OUTPUT);//buzzer
   pinMode(13, OUTPUT);//led indicator when singing a note
-  //    //sing the tunes
-  
 }
 
 void loop() {
@@ -204,6 +182,7 @@ void loop() {
    //random ball movement
    randMove = random(0, 2);
    int delayTime = map(sensorReading, 0, 1023, 200, randSpeed);
+   //animate ball falling; create, erase and move ball down
    lcd.setCursor(falling, randMove);
    lcd.write(byte(0));
    delay(delayTime);
@@ -250,16 +229,16 @@ void sing(int s) {
   // iterate over the notes of the melody:
   song = s;
   if (song == 2) {
-    Serial.println(" 'Feilure Theme'");
-    int size = sizeof(feilure_melody) / sizeof(int);
+    Serial.println(" 'Failure Theme'");
+    int size = sizeof(failure_melody) / sizeof(int);
     for (int thisNote = 0; thisNote < size; thisNote++) {
 
       // to calculate the note duration, take one second
       // divided by the note type.
       //e.g. quarter note = 1000 / 4, eighth note = 1000/8, etc.
-      int noteDuration = 1000 / feilure_tempo[thisNote];
+      int noteDuration = 1000 / failure_tempo[thisNote];
 
-      buzz(melodyPin, feilure_melody[thisNote], noteDuration);
+      buzz(melodyPin, failure_melody[thisNote], noteDuration);
 
       // to distinguish the notes, set a minimum time between them.
       // the note's duration + 30% seems to work well:
