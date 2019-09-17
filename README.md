@@ -2,7 +2,7 @@
 
 ## Part A. Solder your LCD panel
 
-![solder](../img/lab2/solder.png)
+![solder](../IMG-1192.JPG)
 
 ## Part B. Writing to the LCD
  
